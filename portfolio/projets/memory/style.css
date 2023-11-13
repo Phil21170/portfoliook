@@ -1,0 +1,92 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #f6efef;
+	background-color: rgb(5, 74, 24);
+	box-shadow: inset 0 0 800px rgb(0, 0, 0);
+	padding-top: 50px;
+	background-size: cover;
+	background-repeat: repeat;
+	background-position: center;
+
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+main {
+	padding-bottom: 40px;
+}
+
+h1 {
+	text-align: center;
+	margin: 0;
+	text-transform: uppercase;
+
+}
+
+#score {
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 30px;
+}
+
+.memory-game {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	perspective: 1000px;
+}
+
+.memory-card {
+	width: 200px;
+	height: 250px;
+	margin: 10px 2%;
+	position: relative;
+	transform: scale(1);
+	transform-style: preserve-3d;
+	transition: transform .5s;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.memory-card:active {
+	transform: scale(0.97);
+	transition: transform .2s;
+}
+
+.memory-card.flip {
+	transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	position: absolute;
+	border-radius: 5px;
+	background: rgb(250, 229, 232);
+	backface-visibility: hidden;
+}
+
+.front-face {
+	transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 769px) {
+    .memory-game{
+        justify-content: space-around;
+    }
+    .memory-card{
+        width: 125px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,399 @@
+:root {
+	--mainColor: #111;
+	--max-width: 1500px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--mainColor);
+  background-color: #DEE1E4;
+  line-height: 1.6em; 
+  margin: 0;
+  
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+ .container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+img {
+	max-width: 100%;
+	height: auto; 
+}
+
+a {
+  color: darkblue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: darkorchid;
+}
+
+.video-container {
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; 
+}
+
+header {
+  position: relative;
+  z-index: 20;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2rem 5%; 
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+nav a {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+  color: #666;
+  text-decoration: none;
+  text-transform: uppercase; 
+  transition-property: color;
+  transition-duration: 1s; 
+  z-index: 999;
+}
+
+nav a:hover {
+  color: var(--mainColor);
+  transform: scale(1.5);
+  transition-property: all;
+}
+
+.burger {
+  display: none;
+}
+
+
+#texte-anime {
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 3rem;
+  line-height: 2em;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  line-height: normal;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2rem 0;
+  text-align: center;
+  animation: slideFromLeft 2s forwards; /* Applique l'animation */ 
+}
+
+h1 span {
+  display: block;
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin: 1.5rem 0;
+  animation: slideFromRight 2s forwards; /* Applique l'animation */ 
+}
+
+h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  animation: slideFromLeft 2s forwards; /* Applique l'animation */
+}
+
+.big {
+  font-size: 1.8rem;
+  line-height: 2; 
+}
+
+span.block {
+  display: block;
+}
+
+main.container {
+  padding-bottom:50px ;
+}
+
+main {
+  min-height: 75vh;
+  position: relative;
+  z-index: 100;
+}
+
+p.lead {
+  width: 70%;
+  font-size: 1.3rem;
+  line-height: 1.5em;
+  margin: 0 auto;
+  padding: 4rem 0; 
+  text-align: justify;
+  animation: slideFromLeft 2s forwards; /* Applique l'animation */
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+article a img {
+  max-width: 800px;
+  width: 100%;
+}
+
+footer {
+  position: relative;
+  z-index: 150;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+}
+
+address div {
+  font-style: normal;
+  display: grid;
+  grid-template-columns: 40px 3fr;
+  margin: 1rem 0;
+}
+
+address i {
+  grid-column : 1;
+  font-size: 1.5rem;
+}
+
+address p {
+  grid-column: 2 span 3;
+  margin: 0;
+}
+
+address img {
+  border-radius: 1rem;
+  border: 2px solid black;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 55);
+  filter: grayscale(80%);
+  width: 50%;
+}
+
+.contactgrid {
+grid-template-columns: repeat(2, 1fr) ;
+}
+
+form {
+  margin-bottom: 2rem;  
+}
+
+.form-row {
+	margin-bottom: 1rem;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input,
+textarea {
+	border: 1px solid #CCCCCC;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 55);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	padding: 8px;
+	width: 100%;
+	border-radius: 6px;
+}
+
+input[type="checkbox"] {
+	margin-right: 8px;
+}
+
+input[type="checkbox"]+label {
+	display: inline;
+}
+
+button {
+	display: block;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	background-color: var(--mainColor);
+	color: white;
+	border: 0;
+	border-radius: 6px;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+a[href^="tel:"], .linkedin a {
+  text-decoration: none;
+}
+
+article {
+  text-align: center;
+}
+ 
+
+/* css rgpd */
+
+ summary::marker, summary h2 {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+summary h2 {
+	font-size: 1.4rem;
+}
+
+details ul {
+	list-style-type: disc;
+  padding-left: 40px;   
+} 
+
+/* Styles de la partie contact */
+
+#contact {
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 769px) {
+
+
+.video-container {
+  display: none;
+}
+  
+.image-container {
+  background-image: url(../img/backphone.png);
+  background-size: cover;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+  header {
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+header nav {
+  display: none;
+  padding: 0;
+  flex-direction: column; 
+  background-color: transparent;
+}
+
+.burger {
+  display: inline-block;
+  margin-left: 90%;
+  cursor: pointer;
+}
+
+  .contactgrid {
+    grid-template-columns: auto;
+  }
+
+adress img {
+  width: 25%;
+}
+
+#texte-anime {
+  font-size: 2rem;
+  line-height: 1.5em;
+}
+
+.big {
+  font-size: 1.5rem;
+  line-height: 1.3em;
+}
+
+  p.lead {
+    width: 90%;
+    font-size: 1.5rem;
+    line-height: 1.6em;
+    text-align: center;
+  }
+
+  h1 span {
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+  h2 {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+}
+
